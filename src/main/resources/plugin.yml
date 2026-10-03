@@ -1,1 +1,21 @@
+name: JailPlugin
+version: 1.0.0
+main: com.example.jail.JailPlugin
+# Set this to your server's Minecraft version (e.g. 26.2 / 1.26.2 as shown in /version)
+api-version: '26.2'
+description: Imprison players in a block cell with /jail and release them with /unjail.
 
+commands:
+  jail:
+    description: Imprison a player in a cell at their current location.
+    usage: /jail <player> <duration>
+    permission: jail.use
+  unjail:
+    description: Remove a player's cell and release them.
+    usage: /unjail <player>
+    permission: jail.use
+
+permissions:
+  jail.use:
+    description: Allows /jail and /unjail
+    default: op
